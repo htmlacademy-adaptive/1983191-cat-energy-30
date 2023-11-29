@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Евгения Исаева](https://up.htmlacademy.ru/adaptive/30/user/1983191).
-* Наставник: `Неизвестно`.
+- Студент: [Евгения Исаева](https://up.htmlacademy.ru/adaptive/30/user/1983191).
+- Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
