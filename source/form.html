@@ -6,13 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo logo" href="/">
-        <img class="logo__image" alt="Лого" src="images/logo.svg" width="33" height="38">
-        <img class="logo__text" alt="Кэт энерджи" src="images/logo-text.svg" width="101" height="18">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="images/header/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/header/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+          <img class="logo__image" alt="Лого" src="images/header/logo-mobile.svg" width="33" height="38">
+        </picture>
+
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/header/logo-text-tablet.svg" width="101" height="18" type="image/svg+xml">
+          <img class="logo__text" alt="Кэт энерджи" src="images/header/logo-text-mobile.svg" width="101" height="18">
+        </picture>
       </a>
 
       <nav class="main-nav">
@@ -198,7 +210,7 @@
       <div class="page-footer__container container">
         <a class="page-footer__logo" href="/">
           <span class="visually-hidden">Логотип «Кэт энерджи»</span>
-          <img alt="Кэт энерджи" src="images/footer-logo.svg" width="128" height="24">
+          <img alt="Кэт энерджи" src="images/footer/footer-logo.svg" width="128" height="24">
         </a>
 
         <ul class="page-footer__social social">
@@ -225,7 +237,7 @@
         <div class="page-footer__copyright">
           <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
-            <img class="copyright__icon" alt="HTML Academy" src="images/icons/icon-academy.svg" width="27" height="34">
+            <img class="copyright__icon" alt="HTML Academy" src="images/footer/logo-academy.svg" width="27" height="34">
           </a>
         </div>
       </div>
