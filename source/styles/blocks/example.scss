@@ -1,0 +1,25 @@
+.example__title {
+  color: $color-text-accent;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+.example__result {
+  font-family: $font-heading;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-accent;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}

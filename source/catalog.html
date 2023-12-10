@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Кэт энерджи</title>
@@ -12,41 +12,44 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-  <body class="page__body">
+  <body class="page">
     <header class="page-header">
-      <a class="page-header__logo logo" href="/">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="images/header/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
-          <source media="(min-width: 768px)" srcset="images/header/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
-          <img class="logo__image" alt="Лого" src="images/header/logo-mobile.svg" width="33" height="38">
-        </picture>
+      <div class="page-header__container container">
+        <a class="page-header__logo logo" href="/">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="images/header/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/header/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img class="logo__image" alt="Лого" src="images/header/logo-mobile.svg" width="33" height="38">
+          </picture>
 
-        <picture>
-          <source media="(min-width: 768px)" srcset="images/header/logo-text-tablet.svg" width="101" height="18" type="image/svg+xml">
-          <img class="logo__text" alt="Кэт энерджи" src="images/header/logo-text-mobile.svg" width="101" height="18">
-        </picture>
-      </a>
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/header/logo-text-tablet.svg" width="101" height="18" type="image/svg+xml">
+            <img class="logo__text" alt="Кэт энерджи" src="images/header/logo-text-mobile.svg" width="101" height="18">
+          </picture>
+        </a>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <span class="toggle__line"></span>
-          <span class="toggle__line"></span>
-          <span class="toggle__line"></span>
-        </button>
+        <nav class="main-nav">
+          <button class="main-nav__toggle toggle" type="button">
+            <span class="toggle__line"></span>
+            <span class="toggle__line"></span>
+            <span class="toggle__line"></span>
+            <span class="toggle__line"></span>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
 
-        <ul class="main-nav__list main-menu">
-          <li class="main-menu__item main-menu__item--active">
-            <a href="/">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#">каталог продукции</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="form.html">подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+          <ul class="main-nav__list main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="/">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--active" href="catalog.html">каталог продукции</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page__content">
@@ -58,7 +61,7 @@
             <li class="products-list__item product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-chicken-500-desktop@1x.png 1x, images/catalog/product-chicken-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-chicken-500-desktop@1x.png 1x, images/catalog/product-chicken-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-chicken-500-tablet@1x.png 1x, images/catalog/product-chicken-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-chicken-500-mobile@1x.png" srcset="images/catalog/product-chicken-500-mobile@2.png 2x" width="140" height="107" alt="Cat Energy PRO курица, 500 г">
                 </picture>
@@ -88,7 +91,7 @@
             <li class="products-list__item product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-chicken-1000-desktop@1x.png 1x, images/catalog/product-chicken-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-chicken-1000-desktop@1x.png 1x, images/catalog/product-chicken-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-chicken-1000-tablet@1x.png 1x, images/catalog/product-chicken-1000-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-chicken-1000-mobile@1x.png" srcset="images/catalog/product-chicken-1000-mobile@2.png 2x" width="140" height="107" alt="Cat Energy PRO курица, 1000 г">
                 </picture>
@@ -118,7 +121,7 @@
             <li class="products-list__item product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-fish-500-desktop@1x.png 1x, images/catalog/product-fish-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-fish-500-desktop@1x.png 1x, images/catalog/product-fish-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-fish-500-tablet@1x.png 1x, images/catalog/product-fish-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-fish-500-mobile@1x.png" srcset="images/catalog/product-fish-500-mobile@2.png 2x" width="140" height="107" alt="Cat Energy PRO рыба, 500 г">
                 </picture>
@@ -148,7 +151,7 @@
             <li class="products-list__item product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-fish-1000-desktop@1x.png 1x, images/catalog/product-fish-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-fish-1000-desktop@1x.png 1x, images/catalog/product-fish-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-fish-1000-tablet@1x.png 1x, images/catalog/product-fish-1000-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-fish-1000-mobile@1x.png" srcset="images/catalog/product-fish-500-mobile@2.png 2x" width="140" height="107" alt="Cat Energy PRO рыба, 1000 г">
                 </picture>
@@ -178,7 +181,7 @@
             <li class="products-list__item product-card">
               <a  class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-buckwheat-500-desktop@1x.png 1x, images/catalog/product-buckwheat-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-buckwheat-500-desktop@1x.png 1x, images/catalog/product-buckwheat-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-buckwheat-500-tablet@1x.png 1x, images/catalog/product-buckwheat-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-buckwheat-500-mobile@1x.png" srcset="images/catalog/product-buckwheat-500-mobile@2.png 2x" width="140" height="107" alt="Cat Energy SLIM гречка, 500 г">
                 </picture>
@@ -208,7 +211,7 @@
             <li class="products-list__item product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-buckwheat-1000-desktop@1x.png 1x, images/catalog/product-buckwheat-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-buckwheat-1000-desktop@1x.png 1x, images/catalog/product-buckwheat-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-buckwheat-1000-tablet@1x.png 1x, images/catalog/product-buckwheat-1000-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-buckwheat-1000-mobile@1x.png" srcset="images/catalog/product-buckwheat-1000-mobile@2.png 2x" width="140" height="107" alt="Cat Energy SLIM гречка, 1000 г">
                 </picture>
@@ -238,7 +241,7 @@
             <li class="products-list__item product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="images/catalog/product-rice-500-desktop@1x.png 1x, images/catalog/product-rice-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+                  <source media="(min-width: 1400px)" srcset="images/catalog/product-rice-500-desktop@1x.png 1x, images/catalog/product-rice-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
                   <source media="(min-width: 768px)" srcset="images/catalog/product-rice-500-tablet@1x.png 1x, images/catalog/product-rice-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-rice-500-mobile@1x.png" srcset="images/catalog/product-rice-500-mobile@2.png 2x" width="140" height="107" alt="Cat Energy SLIM рис, 500 г">
                 </picture>
@@ -340,12 +343,12 @@
             <h3 class="contacts-detail__title">
               приглашаем к сотрудничеству дилеров!
             </h3>
-            <div class="contacts-detail__address">
+            <address class="contacts-detail__address">
               <span class="contacts-detail__text">
                 ул. Большая Конюшенная, д. 19/8
               </span>
               <span class="contacts-detail__text">Санкт-Петербург</span>
-            </div>
+            </address>
           </div>
         </div>
 
@@ -362,19 +365,19 @@
 
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <a class="social__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
               <img class="social__icon" alt="Логотип Вконтакте" src="images/icons/icon-vkontakte.svg" width="28" height="22">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы на Ютубе</span>
               <img class="social__icon" alt="Логотип Ютуб" src="images/icons/icon-youtube.svg" width="28" height="22">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <a class="social__link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграме</span>
               <img class="social__icon" alt="Логотип Телеграм" src="images/icons/icon-telegram.svg" width="28" height="22">
             </a>

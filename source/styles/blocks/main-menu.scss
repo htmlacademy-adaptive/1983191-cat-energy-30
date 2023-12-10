@@ -1,0 +1,29 @@
+.main-menu {
+  @include list-reset;
+  font-family: $font-heading;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    gap: 33px;
+  }
+}
+
+.main-menu__link {
+  color: $color-text-accent;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    border-bottom: 2px solid $color-primary;
+  }
+}

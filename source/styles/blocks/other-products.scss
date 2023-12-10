@@ -1,0 +1,25 @@
+.other-products {
+  @include list-reset;
+}
+
+.other-products__title {
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 1;
+  color: #222222;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+  }
+}
+
+.other-products__info {
+  font-size: 14px;
+  line-height: 1;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

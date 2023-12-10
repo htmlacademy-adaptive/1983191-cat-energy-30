@@ -1,0 +1,11 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav__toggle {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

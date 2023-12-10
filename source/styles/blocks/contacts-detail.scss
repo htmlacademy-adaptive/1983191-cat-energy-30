@@ -1,0 +1,30 @@
+.contacts-detail {
+  background-color: $white;
+}
+
+.contacts-detail__title {
+  font-family: $font-heading;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts-detail__address {
+  font-style: normal;
+}
+
+.contacts-detail__text {
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
+}

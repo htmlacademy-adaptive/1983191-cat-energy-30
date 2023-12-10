@@ -1,0 +1,29 @@
+.form {
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__group {
+  display: flex;
+}
+
+.form__control {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+.form__note {
+  font-family: $font-base;
+  color: $color-text-accent;
+  text-transform: none;
+  margin: 0;
+}

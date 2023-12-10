@@ -1,0 +1,12 @@
+.about__title {
+  color: $color-text-accent;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 60px;
+    line-height: 1;
+  }
+}

@@ -1,1 +1,35 @@
-/* здесь используйте глобальные переменные */
+/* BREAKPOINTS */
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1400px;
+
+/* FONTS */
+$font-base: "Lato", "Verdana", sans-serif;
+$font-heading: "Oswald", "Verdana", sans-serif;
+
+/* PALETTE */
+$basic-green: #68b738;
+$special-green: #5eaa2f;
+
+$basic-grey: #f2f2f2;
+$light-grey: #ebebeb;
+$dark-grey: #444444;
+$accent-grey: #666666;
+
+$black: #000000;
+$white: #ffffff;
+$pink: #ff8282;
+
+/* COLORS */
+$color-primary: $basic-green;
+$color-primary-hover: $special-green;
+$color-secondary: $basic-grey;
+$color-secondary-hover: $light-grey;
+
+$color-text-base: $dark-grey;
+$color-text-accent: $black;
+$color-text-primary: $white;
+$color-text-secondary: $dark-grey;
+
+$color-bg-base: $basic-grey;
+$color-border-base: $basic-grey;
+$color-border-error: $pink;

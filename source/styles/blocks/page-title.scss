@@ -1,0 +1,12 @@
+.page-title {
+  font-family: $font-heading;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  color: $color-text-accent;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
