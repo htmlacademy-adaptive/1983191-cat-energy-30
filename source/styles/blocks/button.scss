@@ -1,0 +1,43 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-text-primary;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary-hover;
+      color: $color-text-primary;
+    }
+
+    &:active {
+      background-color: $color-primary-hover;
+      color: rgba($color-text-primary, 0.3);
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-text-secondary;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-secondary-hover;
+      color: $color-text-secondary;
+    }
+  }
+}

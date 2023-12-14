@@ -1,0 +1,35 @@
+.program-item {
+  background-color: $color-bg-base;
+}
+
+.program-item__title {
+  color: $color-text-accent;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 36px;
+  }
+}
+
+.program-item__link {
+  color: $color-text-accent;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

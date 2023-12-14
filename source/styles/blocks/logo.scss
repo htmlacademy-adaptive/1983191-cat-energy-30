@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.logo__image {
+  display: block;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 14px;
+  }
+}
+
+.logo__text {
+  display: block;
+}
