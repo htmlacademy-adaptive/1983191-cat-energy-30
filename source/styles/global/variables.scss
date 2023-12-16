@@ -1,6 +1,10 @@
 /* BREAKPOINTS */
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1400px;
+$breakpoints: (
+  xl: 1400px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px,
+);
 
 /* FONTS */
 $font-base: "Lato", "Verdana", sans-serif;
@@ -12,6 +16,7 @@ $special-green: #5eaa2f;
 
 $basic-grey: #f2f2f2;
 $light-grey: #ebebeb;
+$special-drey: #e7e7e7;
 $dark-grey: #444444;
 $accent-grey: #666666;
 
@@ -31,5 +36,5 @@ $color-text-primary: $white;
 $color-text-secondary: $dark-grey;
 
 $color-bg-base: $basic-grey;
-$color-border-base: $basic-grey;
-$color-border-error: $pink;
+$color-border-base: $special-drey;
+$color-error: $pink;

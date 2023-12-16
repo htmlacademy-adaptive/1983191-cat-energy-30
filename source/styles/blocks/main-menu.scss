@@ -5,7 +5,7 @@
   line-height: 1;
   text-transform: uppercase;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     display: flex;
     gap: 33px;
   }

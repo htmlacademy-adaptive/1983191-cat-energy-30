@@ -4,7 +4,7 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     font-size: 20px;
     line-height: 30px;
   }
@@ -12,13 +12,36 @@
 
 .form__group {
   display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
 }
 
 .form__control {
+  flex-grow: 1;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   text-transform: inherit;
+  border: 1px solid $color-border-base;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: $dark-grey;
+    outline: none;
+  }
+
+  &--invalid {
+    border-color: $color-error;
+  }
+
+  &--mail,
+  &--phone {
+    padding-right: 48px;
+  }
 }
 
 .form__note {
@@ -26,4 +49,28 @@
   color: $color-text-accent;
   text-transform: none;
   margin: 0;
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #222222;
+
+  .form__control:hover + & {
+    color: #222222;
+  }
+
+  .form__control:focus + & {
+    color: $color-primary;
+  }
+
+  .form__control--invalid + & {
+    color: $color-error;
+  }
 }

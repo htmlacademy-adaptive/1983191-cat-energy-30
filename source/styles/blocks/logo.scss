@@ -3,16 +3,25 @@
   align-items: center;
   position: relative;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__image {
   display: block;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     margin-right: 13px;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @include media-breakpoint-up(xl) {
     margin-right: 14px;
   }
 }

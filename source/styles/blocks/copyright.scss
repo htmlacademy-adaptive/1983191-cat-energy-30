@@ -1,5 +1,6 @@
 .copyright {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
   color: $color-text-base;
@@ -12,9 +13,24 @@
   &:active {
     opacity: 0.3;
   }
+
+  @include media-breakpoint-up(md) {
+    justify-content: center;
+    gap: 23px;
+  }
 }
 
 .copyright__text {
   font-size: 16px;
   line-height: 20px;
+}
+
+.copyright__icon {
+  display: block;
+  color: $accent-grey;
+
+  .copyright:hover &,
+  .copyright:focus & {
+    color: $color-primary;
+  }
 }

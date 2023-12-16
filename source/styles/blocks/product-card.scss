@@ -1,11 +1,36 @@
 .product-card {
-  @media (min-width: $breakpoint-tablet) {
+  padding: 20px 20px 25px;
+  border-bottom: 2px solid #d3d3d3;
+
+  @include media-breakpoint-up(md) {
     background-color: $color-bg-base;
+    border: none;
   }
 
   &--more {
-    @media (min-width: $breakpoint-tablet) {
+    padding-top: 78px;
+    position: relative;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      top: 39px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #d3d3d3;
+    }
+
+    &::after {
+      transform: translateX(-50%) rotate(-90deg);
+    }
+
+    @include media-breakpoint-up(md) {
       background-color: transparent;
+      border: 2px solid $color-bg-base;
     }
   }
 }
@@ -19,7 +44,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     font-size: 20px;
     line-height: 24px;
   }
@@ -29,8 +54,12 @@
   font-size: 12px;
   line-height: 16px;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 20px;
   }
+}
+
+.product-card__button {
+  display: block;
 }
