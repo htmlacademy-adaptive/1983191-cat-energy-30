@@ -1,4 +1,24 @@
 .social {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  line-height: 1;
+}
+
+.social__link {
+  display: block;
+  color: $accent-grey;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $color-primary;
+    opacity: 0.3;
+  }
 }

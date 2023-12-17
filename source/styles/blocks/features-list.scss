@@ -1,3 +1,48 @@
 .features-list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.features-list__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $color-primary;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  &--nutrition::before {
+    background-image: url("../../images/icons/stack.svg#feature-1");
+    background-size: 30px 32px;
+  }
+
+  &--recipe::before {
+    background-image: url("../../images/icons/stack.svg#feature-2");
+    background-size: 26px 29px;
+  }
+
+  &--plan::before {
+    background-image: url("../../images/icons/stack.svg#feature-3");
+    background-size: 25px 30px;
+  }
+
+  &--result::before {
+    background-image: url("../../images/icons/stack.svg#feature-4");
+    background-size: 27px 31px;
+  }
+}
+
+.features-list__text {
+  margin-top: 0;
+  margin-bottom: 0;
 }

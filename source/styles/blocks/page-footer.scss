@@ -1,3 +1,16 @@
 .page-footer {
   background-color: $color-bg-base;
 }
+
+.page-footer__logo {
+  color: #111111;
+
+  &:hover,
+  &:focus {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
+}

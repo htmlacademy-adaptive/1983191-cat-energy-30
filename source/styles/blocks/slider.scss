@@ -1,3 +1,66 @@
 .slider {
   position: relative;
 }
+
+.slider__button {
+  width: 4px;
+  height: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 2px;
+  background-color: $accent-grey;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $accent-grey;
+    border-radius: 50%;
+    background: $white;
+  }
+
+  &::after {
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../images/icons/stack.svg#slider-button");
+    background-color: $accent-grey;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+
+    &::before {
+      border-color: $color-primary;
+    }
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &:active {
+    background-color: $color-primary-hover;
+    opacity: 0.6;
+
+    &::before {
+      border-color: $color-primary;
+    }
+
+    &::after {
+      background-color: $color-primary-hover;
+    }
+  }
+}

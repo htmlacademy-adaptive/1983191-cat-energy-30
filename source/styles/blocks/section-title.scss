@@ -7,7 +7,7 @@
   text-transform: uppercase;
   color: $color-text-accent;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     font-size: 36px;
   }
 }

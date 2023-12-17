@@ -6,7 +6,7 @@
   line-height: 1;
   text-transform: uppercase;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -16,7 +16,7 @@
   font-size: 12px;
   line-height: 1;
 
-  @media (min-width: $breakpoint-tablet) {
+  @include media-breakpoint-up(md) {
     font-size: 14px;
   }
 }
