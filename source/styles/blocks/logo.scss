@@ -1,7 +1,6 @@
 .logo {
   display: flex;
   align-items: center;
-  position: relative;
   text-decoration: none;
 
   &:hover,
@@ -21,11 +20,18 @@
     margin-right: 13px;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin-right: 14px;
   }
 }
 
 .logo__text {
   display: block;
+
+  @include media-breakpoint-down(md) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

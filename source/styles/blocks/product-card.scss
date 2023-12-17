@@ -1,16 +1,27 @@
 .product-card {
   padding: 20px 20px 25px;
-  border-bottom: 2px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
+  display: flex;
+  flex-wrap: wrap;
 
   @include media-breakpoint-up(md) {
     background-color: $color-bg-base;
     border: none;
+    padding: 10px 36px 40px;
+    flex-direction: column;
+  }
+
+  &:last-child {
+    @include media-breakpoint-down(md) {
+      border-bottom: 1px solid #d3d3d3;
+    }
   }
 
   &--more {
     padding-top: 78px;
     position: relative;
     text-align: center;
+    justify-content: center;
 
     &::before,
     &::after {
@@ -35,6 +46,45 @@
   }
 }
 
+.product-card__link {
+  margin-bottom: 15px;
+
+  @include media-breakpoint-down(md) {
+    width: 140px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    align-self: center;
+    margin-bottom: 22px;
+  }
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 15px;
+
+  @include media-breakpoint-down(md) {
+    width: calc(100% - 140px);
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 32px;
+  }
+}
+
+.product-card__image {
+  display: block;
+  max-width: 100%;
+
+  @include media-breakpoint-up(md) {
+    margin-top: -70px;
+  }
+}
+
 .product-card__title {
   font-family: $font-heading;
   font-size: 16px;
@@ -43,23 +93,49 @@
   color: #222222;
   text-transform: uppercase;
   text-decoration: none;
+  max-width: 80px;
+  margin-bottom: auto;
+
+  .product-card--more & {
+    max-width: none;
+  }
 
   @include media-breakpoint-up(md) {
     font-size: 20px;
     line-height: 24px;
+    max-width: 140px;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
 .product-card__nutrition {
+  width: 100%;
   font-size: 12px;
   line-height: 16px;
+  margin-top: 14px;
+
+  td:nth-child(even) {
+    text-align: right;
+  }
 
   @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 20px;
+    margin-top: 0;
+
+    tr {
+      border-bottom: 1px solid $border-gray;
+    }
+
+    td {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
   }
 }
 
 .product-card__button {
-  display: block;
+  width: 100%;
 }

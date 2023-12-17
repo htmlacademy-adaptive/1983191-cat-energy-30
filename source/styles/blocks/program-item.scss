@@ -1,6 +1,15 @@
 .program-item {
   background-color: $color-bg-base;
-  padding: 30px 20px 18px;
+  padding: 30px 20px 20px;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    padding: 77px 316px 57px 53px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 77px 62px 58px 52px;
+  }
 }
 
 .program-item__title {
@@ -31,7 +40,6 @@
     content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
   }
 
   &--slim::after {
@@ -39,17 +47,85 @@
     height: 50px;
     background-image: url("../../images/icons/stack.svg#cat-slim");
     left: 7px;
+    transform: translateY(-54%);
   }
 
   &--pro::after {
     width: 67px;
     height: 28px;
     background-image: url("../../images/icons/stack.svg#cat-pro");
-    left: -9px;
+    left: -8px;
+    transform: translateY(-42%);
   }
 
   @include media-breakpoint-up(md) {
     font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: initial;
+    padding-left: 0;
+
+    &::before {
+      width: 200px;
+      left: auto;
+      right: 63px;
+      transform: translateY(-47%);
+    }
+
+    &--slim::after {
+      width: 140px;
+      height: 194px;
+      left: auto;
+      right: 93px;
+    }
+
+    &--pro::after {
+      width: 268px;
+      height: 112px;
+      left: auto;
+      right: 29px;
+      transform: translateY(-45%);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 162px;
+    margin-bottom: 72px;
+
+    &::before {
+      width: 100px;
+    }
+
+    &--slim::after {
+      width: 70px;
+      height: 97px;
+      left: 15px;
+    }
+
+    &--pro::after {
+      width: 134px;
+      height: 56px;
+      left: -18px;
+      transform: translateY(-49%);
+    }
+  }
+}
+
+.program-item__text {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 23px;
+    border-bottom: 1px solid $color-border-secondary;
+    margin-bottom: 19px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 52px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 28px;
   }
 }
 

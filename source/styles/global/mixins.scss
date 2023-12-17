@@ -27,3 +27,9 @@
     @content;
   }
 }
+
+@mixin media-breakpoint-between($screen-width-min, $screen-width-max) {
+  @media (min-width: map-get($breakpoints, $screen-width-min)) and (max-width: (map-get($breakpoints, $screen-width-max) - 1px)) {
+    @content;
+  }
+}

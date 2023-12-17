@@ -1,31 +1,69 @@
 .hero {
+  padding-top: 27px;
   font-family: $font-heading;
-  color: $white;
   line-height: 1;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 302px;
-    background: url("../../images/hero/bg-mobile@1x.jpg") center top no-repeat #64a73d;
   }
 
   @include media-breakpoint-down(md) {
     text-align: center;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 302px;
+      background: url("../../images/hero/bg-mobile@1x.jpg") center top / auto 100% no-repeat #64a73d;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background-image: url("../../images/hero/bg-mobile@2x.jpg");
+      }
+    }
   }
 
   @include media-breakpoint-up(md) {
-    color: $color-text-accent;
+    padding-top: 65px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 580px;
+
+    &::before {
+      background: url("../../images/hero/bg-desktop@1x.jpg") left top / auto 100% no-repeat #64a73d;
+      width: 50%;
+      height: calc(100% + 114px);
+      left: 50%;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background-image: url("../../images/hero/bg-desktop@2x.jpg");
+      }
+    }
   }
 }
 
 .hero__container {
-  padding-top: 27px;
   position: relative;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 110px;
+    padding-bottom: 526px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 80px 20px 0 100px;
+  }
 }
 
 .hero__title {
@@ -40,18 +78,38 @@
 }
 
 .hero__slogan {
+  color: $white;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 29px;
+  margin-top: 0;
+  margin-bottom: 302px;
 
   @include media-breakpoint-up(md) {
+    color: $color-text-accent;
     font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 52px;
   }
 }
 
 .hero__image {
-  display: block;
-  margin: 0 auto 3px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 43px;
+
+  @include media-breakpoint-up(md) {
+    bottom: 0;
+    z-index: -1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 52px;
+    transform: translateX(-162px);
+  }
 }
 
 .hero__button {
@@ -61,5 +119,7 @@
 
   @include media-breakpoint-up(md) {
     padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
