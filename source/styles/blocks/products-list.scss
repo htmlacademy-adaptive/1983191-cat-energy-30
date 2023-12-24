@@ -1,3 +1,15 @@
 .products-list {
   @include list-reset;
+
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 60px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 62px 80px;
+  }
 }

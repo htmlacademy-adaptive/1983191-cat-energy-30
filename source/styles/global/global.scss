@@ -17,3 +17,22 @@ body {
     line-height: 24px;
   }
 }
+
+svg {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+}

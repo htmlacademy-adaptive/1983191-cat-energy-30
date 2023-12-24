@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.main-nav__list {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
 .main-nav__toggle {
   @include media-breakpoint-up(md) {
     display: none;

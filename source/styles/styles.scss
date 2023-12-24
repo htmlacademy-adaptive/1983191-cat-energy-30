@@ -5,17 +5,24 @@
 @import "./global/global";
 @import "./global/visually-hidden";
 
+/* LAYOUT BLOCKS */
+@import "./blocks/button";
+@import "./blocks/container";
+@import "./blocks/page";
+@import "./blocks/page-footer";
+@import "./blocks/page-header";
+@import "./blocks/page-title";
+
 /* BLOCKS */
 @import "./blocks/about";
-@import "./blocks/button";
 @import "./blocks/catalog";
 @import "./blocks/contacts";
 @import "./blocks/contacts-detail";
-@import "./blocks/container";
 @import "./blocks/copyright";
 @import "./blocks/example";
 @import "./blocks/extra";
 @import "./blocks/features-list";
+@import "./blocks/footer-logo";
 @import "./blocks/form";
 @import "./blocks/form-checkbox";
 @import "./blocks/form-radio";
@@ -25,18 +32,12 @@
 @import "./blocks/main-menu";
 @import "./blocks/main-nav";
 @import "./blocks/other-products";
-@import "./blocks/page";
-@import "./blocks/page-footer";
-@import "./blocks/page-header";
-@import "./blocks/page-title";
 @import "./blocks/products-list";
 @import "./blocks/product-card";
 @import "./blocks/programs";
 @import "./blocks/programs-list";
 @import "./blocks/program-item";
-@import "./blocks/section-title";
 @import "./blocks/slider";
 @import "./blocks/social";
 @import "./blocks/special-offer";
-@import "./blocks/stats-list";
 @import "./blocks/toggle";

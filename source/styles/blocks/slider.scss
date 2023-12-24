@@ -1,5 +1,62 @@
 .slider {
   position: relative;
+  overflow: hidden;
+  width: 280px;
+
+  @include media-breakpoint-up(md) {
+    width: 560px;
+  }
+}
+
+.slider__slide {
+  background-color: $example-gray;
+
+  &--before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &--after {
+    position: relative;
+
+    .slider__image {
+      width: auto;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    background-color: $white;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 360px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $example-gray;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &::before {
+      height: 378px;
+      background-color: $color-bg-base;
+    }
+  }
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: left;
+  position: relative;
 }
 
 .slider__button {
@@ -12,7 +69,8 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -2px;
+  z-index: 2;
   cursor: pointer;
 
   &::before,

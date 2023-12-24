@@ -1,9 +1,7 @@
 /* BREAKPOINTS */
 $breakpoints: (
-  xl: 1400px,
-  lg: 992px,
   md: 768px,
-  sm: 576px,
+  lg: 1300px,
 );
 
 /* FONTS */
@@ -16,9 +14,12 @@ $special-green: #5eaa2f;
 
 $basic-grey: #f2f2f2;
 $light-grey: #ebebeb;
-$special-drey: #e7e7e7;
+$special-grey: #e7e7e7;
+$support-grey: #d9d9d9;
+$border-gray: #cdcdcd;
 $dark-grey: #444444;
 $accent-grey: #666666;
+$example-gray: #eaeaea;
 
 $black: #000000;
 $white: #ffffff;
@@ -36,5 +37,6 @@ $color-text-primary: $white;
 $color-text-secondary: $dark-grey;
 
 $color-bg-base: $basic-grey;
-$color-border-base: $special-drey;
+$color-border-base: $special-grey;
+$color-border-secondary: $support-grey;
 $color-error: $pink;

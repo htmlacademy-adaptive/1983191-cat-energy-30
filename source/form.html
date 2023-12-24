@@ -18,7 +18,7 @@
     <div class="page-header__container container">
       <a class="page-header__logo logo" href="/">
         <picture>
-          <source media="(min-width: 1400px)" srcset="images/header/logo-desktop.svg" width="70" height="59"
+          <source media="(min-width: 1300px)" srcset="images/header/logo-desktop.svg" width="70" height="59"
             type="image/svg+xml">
           <source media="(min-width: 768px)" srcset="images/header/logo-tablet.svg" width="60" height="50"
             type="image/svg+xml">
@@ -49,14 +49,14 @@
             <a class="main-menu__link" href="catalog.html">каталог продукции</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu__link--active" href="form.html">подбор программы</a>
+            <a class="main-menu__link main-menu__link--current" href="form.html">подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="page__content">
+  <main class="page__content page__content--inner">
     <div class="get-program">
       <div class="get-program__container container">
         <h1 class="get-program__title page-title">Подбор программы</h1>
@@ -66,11 +66,9 @@
 
     <form class="form" action="https://echo.htmlacademy.ru/" method="post">
       <section class="form__section">
-        <h2 class="form__title section-title visually-hidden">
-          <span class="section-title__inner">Анкета пациента</span>
-        </h2>
+        <h2 class="visually-hidden">Анкета пациента</h2>
 
-        <div class="form__wrap container">
+        <div class="form__wrap form__container container">
           <fieldset class="form__fieldset form__fieldset--main">
             <legend class="visually-hidden">Данные питомца</legend>
             <div class="form__group">
@@ -115,38 +113,35 @@
         </div>
       </section>
 
-      <section class="form__section">
-        <h2 class="form__title section-title">
-          <span class="section-title__inner">Контактные данные (владельца кота)</span>
-        </h2>
+      <section class="form__section form__section--with-title">
+        <div class="form__container container">
+          <h2 class="form__section-title">Контактные данные (владельца кота)</h2>
 
-        <div class="form__wrap container">
-          <div class="form__group">
-            <label class="form__label" for="mail">E-mail:*</label>
-            <input class="form__control form__control--mail" type="email" id="mail" name="mail"
-              placeholder="кuklachev@gmail.com" required>
-            <svg class="form__icon" width="20" height="20" role="img">
-              <use href="images/icons/stack.svg#input-email"></use>
-            </svg>
-          </div>
+          <div class="form__wrap">
+            <div class="form__group">
+              <label class="form__label" for="mail">E-mail:*</label>
+              <input class="form__control form__control--mail" type="email" id="mail" name="mail"
+                placeholder="кuklachev@gmail.com" required>
+              <svg class="form__icon" width="20" height="20" role="img">
+                <use href="images/icons/stack.svg#input-email"></use>
+              </svg>
+            </div>
 
-          <div class="form__group">
-            <label class="form__label" for="phone">Телефон:*</label>
-            <input class="form__control form__control--phone" type="tel" id="phone" name="phone"
-              placeholder="8 (960) 900-60-90" required>
-            <svg class="form__icon" width="20" height="20" role="img">
-              <use href="images/icons/stack.svg#input-phone"></use>
-            </svg>
+            <div class="form__group">
+              <label class="form__label" for="phone">Телефон:*</label>
+              <input class="form__control form__control--phone" type="tel" id="phone" name="phone"
+                placeholder="8 (960) 900-60-90" required>
+              <svg class="form__icon" width="20" height="20" role="img">
+                <use href="images/icons/stack.svg#input-phone"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="form__section">
-        <h2 class="form__title section-title">
-          <span class="section-title__inner">Комментарий</span>
-        </h2>
-
-        <div class="container">
+      <section class="form__section form__section--with-title">
+        <div class="form__container container">
+          <h2 class="form__title form__section-title">Комментарий</h2>
           <div class="form__group">
             <label class="form__label visually-hidden" for="comment">Оставьте комментарий</label>
             <textarea class="form__control form__control--textarea" id="comment" name="comment"
@@ -155,12 +150,10 @@
         </div>
       </section>
 
-      <section class="form__section">
-        <h2 class="form__title section-title">
-          <span class="section-title__inner">Дополнительно</span>
-        </h2>
+      <section class="form__section form__section--with-title">
+        <div class="form__container container">
+          <h2 class="form__title form__section-title">Дополнительно</h2>
 
-        <div class="container">
           <div class="form__extra">
             <div class="form-checkbox">
               <input class="form-checkbox__input" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -207,7 +200,7 @@
       <div class="contacts__container container">
         <div class="contacts__detail contacts-detail">
           <h3 class="contacts-detail__title">
-            приглашаем к сотрудничеству дилеров!
+            приглашаем к&nbsp;сотрудничеству дилеров!
           </h3>
           <address class="contacts-detail__address">
             <span class="contacts-detail__text">
@@ -225,38 +218,42 @@
     </section>
 
     <div class="page-footer__container container">
-      <a class="page-footer__logo" href="/" aria-label="На главную">
-        <svg width="128" height="24" role="img">
-          <use href="images/icons/stack.svg#footer-logo"></use>
-        </svg>
-      </a>
+      <div class="page-footer__logo">
+        <a class="footer-logo" href="/" aria-label="На главную">
+          <svg width="128" height="24" role="img">
+            <use href="images/icons/stack.svg#footer-logo"></use>
+          </svg>
+        </a>
+      </div>
 
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link" href="https://vk.com/htmlacademy" target="_blank" rel="noopener noreferrer"
-            aria-label="Мы в Вконтакте">
-            <svg class="social__icon" width="28" height="22" role="img">
-              <use href="images/icons/stack.svg#vkontakte"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
-            rel="noopener noreferrer" aria-label="Мы на Ютубе">
-            <svg class="social__icon" width="28" height="22" role="img">
-              <use href="images/icons/stack.svg#youtube"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://t.me/htmlacademy" target="_blank" rel="noopener noreferrer"
-            aria-label="Мы в Телеграме">
-            <svg class="social__icon" width="28" height="22" role="img">
-              <use href="images/icons/stack.svg#telegram"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="page-footer__social">
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/htmlacademy" target="_blank" rel="noopener noreferrer"
+              aria-label="Мы в Вконтакте">
+              <svg class="social__icon" width="28" height="22" role="img">
+                <use href="images/icons/stack.svg#vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+              rel="noopener noreferrer" aria-label="Мы на Ютубе">
+              <svg class="social__icon" width="28" height="22" role="img">
+                <use href="images/icons/stack.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://t.me/htmlacademy" target="_blank" rel="noopener noreferrer"
+              aria-label="Мы в Телеграме">
+              <svg class="social__icon" width="28" height="22" role="img">
+                <use href="images/icons/stack.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <div class="page-footer__copyright">
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
