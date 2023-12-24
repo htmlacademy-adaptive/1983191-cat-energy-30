@@ -11,6 +11,7 @@
 .social__link {
   display: block;
   color: $accent-grey;
+  transition: all 0.3s ease;
 
   &:hover,
   &:focus {

@@ -10,7 +10,7 @@
 
   @include media-breakpoint-up(lg) {
     background-color: $white;
-    padding: 61px 80px 60px;
+    padding: 61px 76px 60px 80px;
   }
 }
 
@@ -45,6 +45,7 @@
   }
 
   @include media-breakpoint-up(lg) {
+    max-width: 160px;
     text-align: left;
   }
 }
