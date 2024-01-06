@@ -4,6 +4,7 @@
   align-items: center;
   text-decoration: none;
   color: $color-text-base;
+  transition: all 0.3s ease;
 
   &:hover,
   &:focus {
@@ -28,6 +29,7 @@
 .copyright__icon {
   display: block;
   color: $accent-grey;
+  transition: all 0.3s ease;
 
   .copyright:hover &,
   .copyright:focus & {

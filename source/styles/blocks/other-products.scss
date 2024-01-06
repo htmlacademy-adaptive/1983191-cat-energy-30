@@ -1,29 +1,41 @@
 .other-products {
   @include list-reset;
+  font-size: 14px;
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .other-products__item {
   border-top: 1px solid $border-gray;
-  border-bottom: 1px solid $border-gray;
-  padding-top: 12px;
-  padding-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 18px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
-  & + & {
-    margin-top: -1px;
+  &:last-child {
+    border-bottom: 1px solid $border-gray;
   }
 
   @include media-breakpoint-up(md) {
     border-left: 1px solid $border-gray;
     border-right: 1px solid $border-gray;
+    padding: 26px 37px 27px;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 50px;
   }
 
   @include media-breakpoint-up(lg) {
     border-left: none;
     border-right: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 14px 0 17px;
+    display: grid;
+    grid-template-columns: 1fr 210px 50px 244px;
+    column-gap: 32px;
   }
 }
 
@@ -33,28 +45,58 @@
   line-height: 1;
   color: #222222;
   text-transform: uppercase;
-  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    margin-bottom: 12px;
+  }
 
   @include media-breakpoint-up(md) {
     font-size: 20px;
   }
+
+  @include media-breakpoint-between(md, lg) {
+    max-width: 55%;
+  }
 }
 
-.other-products__info {
-  font-size: 14px;
-  line-height: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 12px;
-  margin-bottom: 15px;
+.other-products__size {
+  @include media-breakpoint-between(md, lg) {
+    margin-left: auto;
+    max-width: 25%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+}
+
+.other-products__price {
+  @include media-breakpoint-down(md) {
+    margin-left: auto;
+  }
 
   @include media-breakpoint-up(md) {
-    font-size: 16px;
-    line-height: 20px;
+    flex: 0 0 42px;
+    text-align: right;
+  }
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
   }
 }
 
 .other-products__button {
   width: 100%;
+  margin-top: 15px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 22px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 244px;
+    flex: none;
+    margin-top: 0;
+  }
 }
