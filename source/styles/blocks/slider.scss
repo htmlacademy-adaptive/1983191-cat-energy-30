@@ -40,7 +40,7 @@
   color: $accent-grey;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: var(--slide-width);
   margin-left: -2px;
   z-index: 2;
   cursor: pointer;
