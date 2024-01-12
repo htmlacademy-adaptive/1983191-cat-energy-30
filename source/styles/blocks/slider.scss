@@ -4,6 +4,7 @@
   width: 280px;
   display: grid;
   grid-template-columns: var(--slide-width) calc(100% - var(--slide-width));
+  justify-content: space-between;
   position: relative;
 
   @include media-breakpoint-up(md) {
@@ -14,7 +15,6 @@
 .slider__slide {
   display: flex;
   overflow: hidden;
-  flex-shrink: 0;
   position: relative;
 
   &--before {

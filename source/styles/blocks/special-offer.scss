@@ -1,5 +1,14 @@
 .special-offer {
-  background: url("../../images/special-mobile@1x.jpg") center / cover no-repeat $color-primary;
+  background-image:
+    image-set(
+      url("../../images/special-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/special-mobile@2x.webp") type("image/webp") 2x,
+      url("../../images/special-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../../images/special-mobile@2x.jpg") type("image/jpg") 2x
+    );
+  background-position: center;
+  background-size: cover;
+  background-color: $color-primary;
   color: $white;
   position: relative;
   padding: 186px 58px 44px;
@@ -16,13 +25,15 @@
     transform: translateX(-50%);
   }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../images/special-mobile@2x.jpg");
-  }
-
   @include media-breakpoint-up(md) {
     padding: 70px 20px 70px 420px;
-    background-image: url("../../images/special-tablet@1x.jpg");
+    background-image:
+      image-set(
+        url("../../images/special-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/special-tablet@2x.webp") type("image/webp") 2x,
+        url("../../images/special-tablet@1x.jpg") type("image/jpg") 1x,
+        url("../../images/special-tablet@2x.jpg") type("image/jpg") 2x
+      );
 
     &::before {
       width: 80px;
@@ -30,10 +41,6 @@
       top: 57px;
       left: 77px;
       transform: none;
-    }
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/special-tablet@2x.jpg");
     }
   }
 
@@ -44,16 +51,18 @@
     row-gap: 46px;
     justify-content: center;
     align-items: center;
-    background-image: url("../../images/special-desktop@1x.jpg");
+    background-image:
+      image-set(
+        url("../../images/special-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/special-desktop@2x.webp") type("image/webp") 2x,
+        url("../../images/special-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../../images/special-desktop@2x.jpg") type("image/jpg") 2x
+      );
 
     &::before {
       position: relative;
       left: auto;
       top: auto;
-    }
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/special-desktop@2x.jpg");
     }
   }
 }

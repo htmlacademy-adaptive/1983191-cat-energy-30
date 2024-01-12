@@ -21,23 +21,29 @@
 }
 
 .contacts__map {
-  background: url("../../images/map-tablet@1x.jpg") center / cover no-repeat;
+  background-image:
+    image-set(
+      url("../../images/map-tablet@1x.webp") type("image/webp") 1x,
+      url("../../images/map-tablet@2x.webp") type("image/webp") 2x,
+      url("../../images/map-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../images/map-tablet@2x.jpg") type("image/jpg") 2x
+    );
+  background-position: center;
+  background-size: cover;
   height: 362px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../images/map-tablet@2x.jpg");
-  }
 
   @include media-breakpoint-up(md) {
     height: 400px;
   }
 
   @include media-breakpoint-up(lg) {
-    background-image: url("../../images/map-desktop@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/map-desktop@2x.jpg");
-    }
+    background-image:
+      image-set(
+        url("../../images/map-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/map-desktop@2x.webp") type("image/webp") 2x,
+        url("../../images/map-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../../images/map-desktop@2x.jpg") type("image/jpg") 2x
+      );
   }
 
   iframe {

@@ -13,19 +13,23 @@
     @include media-breakpoint-up(lg) {
       &::before {
         content: "";
-        background: url("../../images/hero/bg-desktop@1x.jpg") left top / auto 100% no-repeat #64a73d;
+        background-image:
+          image-set(
+            url("../../images/hero/bg-desktop@1x.webp") type("image/webp") 1x,
+            url("../../images/hero/bg-desktop@2x.webp") type("image/webp") 2x,
+            url("../../images/hero/bg-desktop@1x.jpg") type("image/jpg") 1x,
+            url("../../images/hero/bg-desktop@2x.jpg") type("image/jpg") 2x
+          );
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-color: #64a73d;
         width: 50%;
         height: 100%;
         position: absolute;
         left: 50%;
         top: 0;
         z-index: -1;
-      }
-
-      @media (min-resolution: 2dppx) {
-        &::before {
-          background-image: url("../../images/hero/bg-desktop@2x.jpg");
-        }
       }
     }
   }
