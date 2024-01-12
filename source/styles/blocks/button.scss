@@ -10,8 +10,13 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 
   &--primary {
     background-color: $color-primary;
@@ -21,6 +26,11 @@
     &:focus {
       background-color: $color-primary-hover;
       color: $color-text-primary;
+    }
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 0.25em rgba($color-primary, 0.5);
     }
 
     &:active {
@@ -38,6 +48,11 @@
     &:active {
       background-color: $color-secondary-hover;
       color: $color-text-secondary;
+    }
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 0.25em rgba($color-secondary-hover, 0.5);
     }
   }
 }

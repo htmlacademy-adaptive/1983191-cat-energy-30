@@ -3,7 +3,7 @@
 }
 
 .page-footer__container {
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 40px;
 
   @include media-breakpoint-down(md) {
@@ -39,8 +39,8 @@
   @include media-breakpoint-down(md) {
     border-top: 1px solid $color-border-secondary;
     border-bottom: 1px solid $color-border-secondary;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 19px;
+    padding-bottom: 19px;
   }
 }
 

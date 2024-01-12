@@ -4,10 +4,16 @@
   align-items: center;
   text-decoration: none;
   color: $color-text-base;
+  transition: color 0.3s ease, opacity 0.3s ease;
 
   &:hover,
   &:focus {
     color: $color-text-base;
+  }
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 0.25em rgba($color-primary, 0.5);
   }
 
   &:active {
@@ -28,6 +34,7 @@
 .copyright__icon {
   display: block;
   color: $accent-grey;
+  transition: color 0.3s ease;
 
   .copyright:hover &,
   .copyright:focus & {

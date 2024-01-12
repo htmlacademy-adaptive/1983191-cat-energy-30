@@ -7,7 +7,7 @@
 
   @include media-breakpoint-up(md) {
     display: flex;
-    gap: 33px;
+    gap: 15px 34px;
     font-size: 18px;
     line-height: 24px;
   }
@@ -18,10 +18,21 @@
   }
 }
 
+.main-menu__item {
+  @include media-breakpoint-down(md) {
+    border-top: 1px solid #e6e6e6;
+
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+}
+
 .main-menu__link {
   color: $color-text-accent;
   text-decoration: none;
   position: relative;
+  transition: color 0.3s ease, opacity 0.3s ease;
 
   &:hover {
     opacity: 0.6;
@@ -29,6 +40,21 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 0.25em rgba($color-primary, 0.5);
+  }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    padding: 23px 20px 22px;
+    text-align: center;
+
+    &--current {
+      color: $color-primary;
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -46,6 +72,11 @@
   @include media-breakpoint-up(lg) {
     .main-menu--index & {
       color: $white;
+
+      &:focus-visible {
+        outline: 0;
+        box-shadow: 0 0 0 0.25em rgba($white, 0.5);
+      }
 
       &--current::after {
         background-color: $white;

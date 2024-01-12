@@ -16,7 +16,7 @@
 <body class="page">
   <header class="page-header">
     <div class="page-header__container container">
-      <a class="page-header__logo logo" href="/">
+      <a class="page-header__logo logo" href="/index.html">
         <picture>
           <source media="(min-width: 1300px)" srcset="images/header/logo-desktop.svg" width="70" height="59"
             type="image/svg+xml">
@@ -32,18 +32,10 @@
         </picture>
       </a>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle toggle" type="button">
-          <span class="toggle__line"></span>
-          <span class="toggle__line"></span>
-          <span class="toggle__line"></span>
-          <span class="toggle__line"></span>
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-
-        <ul class="main-nav__list main-menu">
+      <nav class="page-header__nav page-header__nav--nojs">
+        <ul class="page-header__list main-menu">
           <li class="main-menu__item">
-            <a class="main-menu__link" href="/">Главная</a>
+            <a class="main-menu__link" href="/index.html">Главная</a>
           </li>
           <li class="main-menu__item">
             <a class="main-menu__link main-menu__link--current" href="catalog.html">каталог продукции</a>
@@ -53,6 +45,14 @@
           </li>
         </ul>
       </nav>
+
+      <button class="page-header__toggle page-header__toggle--nojs" type="button">
+        <span class="page-header__toggle-line"></span>
+        <span class="page-header__toggle-line"></span>
+        <span class="page-header__toggle-line"></span>
+        <span class="page-header__toggle-line"></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </div>
   </header>
 
@@ -181,7 +181,7 @@
                     srcset="images/catalog/product-fish-1000-tablet@1x.png 1x, images/catalog/product-fish-1000-tablet@2x.png 2x"
                     width="200" height="210" type="image/png">
                   <img class="product-card__image" src="images/catalog/product-fish-1000-mobile@1x.png"
-                    srcset="images/catalog/product-fish-500-mobile@2x.png 2x" width="140" height="107"
+                    srcset="images/catalog/product-fish-1000-mobile@2x.png 2x" width="140" height="107"
                     alt="Cat Energy PRO рыба, 1000 г">
                 </picture>
               </a>
@@ -236,7 +236,7 @@
                   </tr>
                   <tr>
                     <td>Цена</td>
-                    <td>700 ₽</td>
+                    <td>400 ₽</td>
                   </tr>
                 </table>
               </div>
@@ -272,7 +272,7 @@
                   </tr>
                   <tr>
                     <td>Цена</td>
-                    <td>1000 ₽</td>
+                    <td>700 ₽</td>
                   </tr>
                 </table>
               </div>
@@ -308,7 +308,7 @@
                   </tr>
                   <tr>
                     <td>Цена</td>
-                    <td>700 ₽</td>
+                    <td>500 ₽</td>
                   </tr>
                 </table>
               </div>
@@ -331,43 +331,34 @@
 
     <section class="extra">
       <div class="container">
-        <h2 class="extra__title">Дополнительные товары</h2>
-
+        <h2 class="extra__title section-title">Дополнительные товары</h2>
         <div class="extra__wrap">
           <ul class="extra__list other-products">
             <li class="other-products__item">
               <div class="other-products__title">Сахарозаменитель</div>
-              <div class="other-products__info">
-                <span class="other-products__size">1 упаковка (100&nbsp;г)</span>
-                <span class="other-products__price">200&nbsp;₽</span>
-              </div>
+              <span class="other-products__size">1 упаковка (100&nbsp;г)</span>
+              <span class="other-products__price">200&nbsp;₽</span>
               <a class="other-products__button button button--primary" href="form.html">заказать</a>
             </li>
 
             <li class="other-products__item">
               <div class="other-products__title">питьевая вода</div>
-              <div class="other-products__info">
-                <span class="other-products__size">5 литров</span>
-                <span class="other-products__price">50&nbsp;₽</span>
-              </div>
+              <span class="other-products__size">5 литров</span>
+              <span class="other-products__price">50&nbsp;₽</span>
               <a class="other-products__button button button--primary" href="form.html">заказать</a>
             </li>
 
             <li class="other-products__item">
               <div class="other-products__title">молоко</div>
-              <div class="other-products__info">
-                <span class="other-products__size">1 литр</span>
-                <span class="other-products__price">100&nbsp;₽</span>
-              </div>
+              <span class="other-products__size">1 литр</span>
+              <span class="other-products__price">100&nbsp;₽</span>
               <a class="other-products__button button button--primary" href="form.html">заказать</a>
             </li>
 
             <li class="other-products__item">
               <div class="other-products__title">витамины</div>
-              <div class="other-products__info">
-                <span class="other-products__size">1 упаковка (30 г)</span>
-                <span class="other-products__price">300&nbsp;₽</span>
-              </div>
+              <span class="other-products__size">1 упаковка (30 г)</span>
+              <span class="other-products__price">300&nbsp;₽</span>
               <a class="other-products__button button button--primary" href="form.html">заказать</a>
             </li>
           </ul>
@@ -399,15 +390,17 @@
       </div>
 
       <div class="contacts__map">
-        <iframe title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" width="320"
-          height="400" allowfullscreen src="https://yandex.ru/map-widget/v1/-/CDelyW~D"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197457!2d30.32047247621787!3d59.93871916209477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1703439187277!5m2!1sru!2sru"
+          title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
     <div class="page-footer__container container">
       <div class="page-footer__logo">
-        <a class="footer-logo" href="/" aria-label="На главную">
-          <svg width="128" height="24" role="img">
+        <a class="footer-logo" href="/index.html" aria-label="На главную">
+          <svg width="128" height="25" role="img">
             <use href="images/icons/stack.svg#footer-logo"></use>
           </svg>
         </a>
@@ -443,7 +436,7 @@
       </div>
 
       <div class="page-footer__copyright">
-        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">
           <span class="copyright__text">HTML Academy</span>
           <svg class="copyright__icon" width="27" height="34" role="img">
             <use href="images/icons/stack.svg#logo-academy"></use>

@@ -5,32 +5,17 @@
   padding-bottom: 40px;
 
   @include media-breakpoint-up(md) {
-    background: none;
+    background: linear-gradient(to top, $example-gray 0, $example-gray 463px, $white 463px);
     border-top: 1px solid #e6e6e6;
     padding-top: 45px;
     padding-bottom: 102px;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: 460px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background-color: $example-gray;
-    }
   }
 
   @include media-breakpoint-up(lg) {
+    background: linear-gradient(to bottom, $white 136px, $color-bg-base 136px, $color-bg-base 100%);
     border-top: none;
     padding-top: 0;
     padding-bottom: 75px;
-
-    &::before {
-      background-color: $color-bg-base;
-      top: 134px;
-      height: auto;
-    }
   }
 }
 
@@ -47,7 +32,7 @@
   position: relative;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 108px;
+    margin-bottom: 103px;
   }
 
   @include media-breakpoint-up(lg) {
@@ -102,7 +87,7 @@
 
 .example__detail {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
@@ -116,17 +101,18 @@
 
   @include media-breakpoint-up(lg) {
     width: 100%;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
   }
 }
 
 .example__item {
   border: 1px solid $border-gray;
   border-radius: 5px;
-  padding: 12px 20px 0;
+  padding: 13px 20px 17px;
+  position: relative;
 
   @include media-breakpoint-up(md) {
-    padding: 14px 5px 0;
+    padding: 14px 5px 20px;
   }
 }
 
@@ -145,24 +131,26 @@
 }
 
 .example__caption {
-  max-width: 78px;
   font-size: 12px;
   line-height: 1;
-  margin-left: 0;
+  margin: 0 auto;
   background-color: $example-gray;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  transform: translateY(50%);
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -30%);
 
   @include media-breakpoint-up(md) {
     font-size: 14px;
-    max-width: none;
     background-color: $white;
-    transform: translateY(12px);
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     background-color: $color-bg-base;
   }
 }

@@ -1,6 +1,6 @@
 .program-item {
   background-color: $color-bg-base;
-  padding: 30px 20px 20px;
+  padding: 31px 20px 19px;
   position: relative;
 
   @include media-breakpoint-up(md) {
@@ -55,7 +55,7 @@
     height: 28px;
     background-image: url("../../images/icons/stack.svg#cat-pro");
     left: -8px;
-    transform: translateY(-42%);
+    transform: translateY(-50%);
   }
 
   @include media-breakpoint-up(md) {
@@ -86,7 +86,7 @@
       height: 112px;
       left: auto;
       right: 29px;
-      transform: translateY(-45%);
+      transform: translateY(-45.5%);
     }
   }
 
@@ -96,6 +96,7 @@
 
     &::before {
       width: 100px;
+      transform: translateY(-48%);
     }
 
     &--slim::after {
@@ -115,7 +116,7 @@
 
 .program-item__text {
   @include media-breakpoint-down(md) {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     border-bottom: 1px solid $color-border-secondary;
     margin-bottom: 19px;
   }
@@ -138,17 +139,20 @@
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 
   &::after {
     content: "";
-    width: 24px;
+    width: 32px;
     height: 12px;
+    flex-grow: 0;
+    flex-shrink: 0;
     background-image: url("../../images/icons/stack.svg#arrow");
     background-position: right 8px center;
     background-repeat: no-repeat;
+    transition: background-position 0.2s ease;
   }
 
   &:hover::after,
@@ -160,8 +164,14 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 0.25em rgba($color-text-accent, 0.3);
+  }
+
   @include media-breakpoint-up(md) {
     font-size: 20px;
     line-height: 30px;
+    gap: 25px;
   }
 }
