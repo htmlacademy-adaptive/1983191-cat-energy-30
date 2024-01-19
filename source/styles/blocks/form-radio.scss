@@ -1,61 +1,61 @@
 .form-radio {
   display: flex;
   align-items: center;
+}
 
-  &__input {
-    width: 30px;
-    height: 30px;
-    border: 1px solid $border-gray;
-    border-radius: 50%;
-    background-color: $white;
-    appearance: none;
-    flex-shrink: 0;
-    margin: 0;
-    cursor: pointer;
+.form-radio__input {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-gray;
+  border-radius: 50%;
+  background-color: $white;
+  appearance: none;
+  flex-shrink: 0;
+  margin: 0;
+  cursor: pointer;
 
-    &:checked {
-      background-image: url("../../images/icons/stack.svg#radio-button");
-      background-size: 14px;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-color: $border-gray;
-    }
+  &:checked {
+    background-image: url("../../images/icons/stack.svg#radio-button");
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: $border-gray;
+  }
 
-    &:hover {
-      border-color: #bababa;
-    }
+  &:hover {
+    border-color: #bababa;
+  }
 
-    &:focus-visible {
-      outline: 0;
-      box-shadow: 0 0 0 0.25em rgba($color-primary, 0.5);
-    }
+  &:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 0.25em rgba($color-primary, 0.5);
+  }
 
-    &:disabled {
-      border-color: #bababa;
+  &:disabled {
+    border-color: #bababa;
+    opacity: 0.3;
+
+    + .form-radio__label {
       opacity: 0.3;
-
-      + .form-radio__label {
-        opacity: 0.3;
-        cursor: default;
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      width: 40px;
-      height: 40px;
-
-      &:checked {
-        background-size: 18px;
-      }
+      cursor: default;
     }
   }
 
-  &__label {
-    padding-left: 15px;
-    cursor: pointer;
+  @include media-breakpoint-up(md) {
+    width: 40px;
+    height: 40px;
 
-    @include media-breakpoint-up(md) {
-      padding-left: 20px;
+    &:checked {
+      background-size: 18px;
     }
+  }
+}
+
+.form-radio__label {
+  padding-left: 15px;
+  cursor: pointer;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 20px;
   }
 }
