@@ -150,6 +150,10 @@
   border: 1px solid $color-border-base;
   padding: 13px 15px 12px;
 
+  &[type="number"] {
+    appearance: textfield;
+  }
+
   &::placeholder {
     color: inherit;
     opacity: 1;
@@ -165,19 +169,9 @@
     outline: none;
   }
 
-  @include media-breakpoint-down(md) {
-    &--textarea {
-      padding-right: 14px;
-    }
-  }
-
   @include media-breakpoint-up(md) {
     line-height: 1.5;
     padding: 10px 20px;
-
-    &--textarea {
-      height: 175px;
-    }
   }
 
   &--invalid {
@@ -193,6 +187,14 @@
   &--textarea {
     height: 150px;
     resize: vertical;
+
+    @include media-breakpoint-down(md) {
+      padding-right: 14px;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: 175px;
+    }
   }
 }
 
